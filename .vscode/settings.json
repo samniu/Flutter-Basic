@@ -1,0 +1,12 @@
+{
+    "github.copilot.enable": {
+        "*": false
+    },
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "editor.inlineSuggest.enabled": false,
+    "javascript.updateImportsOnPaste.enabled": false,
+    "typescript.updateImportsOnPaste.enabled": false,
+    "typescript.preferences.includePackageJsonAutoImports": "off"
+}
