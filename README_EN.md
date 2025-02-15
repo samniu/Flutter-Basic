@@ -32,3 +32,7 @@
    - Implementing form validation and submission
    - Using `GlobalKey` to manage form state
    - Submitting form data and displaying it on the screen
+
+8. **Asynchronous Operations**
+   - Using `FutureBuilder` and `StreamBuilder` for handling asynchronous data loading
+   - Handling loading, error, and data display in asynchronous operations
