@@ -26,3 +26,9 @@
    - Basic Navigation
    - Passing Arguments
    - Named Routes
+
+7. **Form Handling**
+   - Creating a simple form and using `Form` and `TextFormField` for data input
+   - Implementing form validation and submission
+   - Using `GlobalKey` to manage form state
+   - Submitting form data and displaying it on the screen

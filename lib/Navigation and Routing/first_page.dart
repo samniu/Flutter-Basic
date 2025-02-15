@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'second_page.dart';
+// import 'second_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
             //   context,
             //   MaterialPageRoute(builder: (context) => SecondPage(data: 'Hello from HomePage!')),
             // );
-            
+
             // 使用命名路由跳转到 SecondPage
             Navigator.pushNamed(context, '/second');            
           },
