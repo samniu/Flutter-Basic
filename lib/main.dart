@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // import 'widgets/home.dart';
 // import 'counter_screen.dart';
 import 'Navigation and Routing/first_page.dart';
+import 'Navigation and Routing/second_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,8 +17,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Basic',
-      theme: ThemeData(primarySwatch: Colors.green),
-      home: FirstPage(),
+      initialRoute: '/',
+      routes:{
+        '/': (context) => HomePage(),
+        '/second': (context) => SecondPage(data: 'Hello from HomePage!')
+      }
     );
   }
 }
