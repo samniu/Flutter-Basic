@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_basic/layoutdemo.dart';
 // import 'package:flutter_basic/home.dart';
-import 'widgets/home.dart';
+// import 'widgets/home.dart';
+import 'counter_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Basic',
       theme: ThemeData(primarySwatch: Colors.green),
-      home: HomeScreen(),
+      home: CounterScreen(),
     );
   }
 }
