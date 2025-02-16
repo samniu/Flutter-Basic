@@ -44,6 +44,13 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
                 Navigator.pushNamed(context, '/animationController');
               },
               child: Text('Go to Animation Controller'),
+            ),  
+            SizedBox(height: 20),          
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/tweenAnimation');
+              },
+              child: Text('Go to Tween Animation'),
             ),            
           ],
         ),
