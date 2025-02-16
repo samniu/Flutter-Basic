@@ -53,3 +53,8 @@ Welcome to the Flutter Learning Project!
    - Store and retrieve local data using SharedPreferences
    - Manage user settings, login states, and persistent storage
    - Implement a simple UI for local data management
+
+11. **State Management with Provider**
+   - Learning Provider provides global status management
+   - Learn about the ChangeNotifier and Consumer usage
+   - Shares data through the Provider

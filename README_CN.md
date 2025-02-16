@@ -49,3 +49,8 @@
    - 使用 SharedPreferences 进行本地数据存储和读取
    - 适用于用户设置、登录状态等持久化存储
    - 创建一个 UI 来演示数据的存储、读取和删除   
+
+11. **使用Provider进行状态管理**
+   - 学习 Provider 进行全局状态管理
+   - 了解 ChangeNotifier 和 Consumer 用法
+   - 通过 Provider 共享数据

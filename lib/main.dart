@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 // import 'package:flutter_basic/layoutdemo.dart';
 // import 'package:flutter_basic/home.dart';
 // import 'widgets/home.dart';
@@ -6,9 +8,17 @@ import 'package:flutter/material.dart';
 import 'Navigation and Routing/app_routes.dart';
 // import 'form/form_home.dart';
 // import 'Future and Stream/home.dart';
+import 'State Management with Provider/counter_provider.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => CounterProvider()),
+      ],
+      child: MainApp(),
+    ),    
+  );
 }
 
 class MainApp extends StatelessWidget {
