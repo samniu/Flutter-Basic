@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 // import 'second_page.dart'; // 导入 SecondPage 文件
 // import '../Animation/animated_container_page.dart'; // AnimatedContainer 示例页面
 // import '../Animation/animation_controller_page.dart'; // AnimationController 示例页面
-// import '../Animation/tween_animation_page.dart'; 
+// import '../Animation/tween_animation_page.dart';
 // import '../Animation/hero_animation_page.dart';
 // import '../Animation/tap_scale_animation_page.dart';
 // import '../network/network_page.dart';
 // import '../SharedPreferences(local storage)/storage_page.dart';
-// import '../State Management with Provider/provider_page.dart'; 
-import '../database/database_page.dart';
-import '../theme/theme_demo_page.dart';
+// import '../State Management with Provider/provider_page.dart';
+// import '../database/database_page.dart';
+// import '../theme/theme_demo_page.dart';
+import '../firebase/register_page.dart';
+import '../firebase/login_page.dart';
+import '../firebase/home_page.dart';
+
 
 class AppRoutes {
   // 返回路由配置
@@ -18,7 +22,7 @@ class AppRoutes {
     return {
       // '/': (context) => HomePage(),
       // '/second': (context) => SecondPage(data: 'Hello from HomePage!'),
-      
+
       //Animation
       // '/animatedContainer': (context) => AnimatedContainerPage(),
       // '/animationController': (context) => AnimationControllerPage(),
@@ -36,10 +40,15 @@ class AppRoutes {
       // '/provider': (context) => ProviderPage(),
 
       // database
-      '/database': (context) => DatabasePage(),
+      // '/database': (context) => DatabasePage(),
 
       // theme
-      '/themeDemo': (context) => ThemeDemoPage(),
+      // '/themeDemo': (context) => ThemeDemoPage(),
+
+      //firebase
+      '/register': (context) => RegisterPage(),
+      '/login': (context) => LoginPage(),
+      '/userhome': (context) => HomePage(),
     };
   }
 
@@ -51,6 +60,7 @@ class AppRoutes {
     // return '/storage';
     // return '/provider';
     // return '/database';
-    return '/themeDemo';
+    // return '/themeDemo';
+    return '/register';
   }
 }
