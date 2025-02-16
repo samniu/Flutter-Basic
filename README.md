@@ -43,3 +43,8 @@ Welcome to the Flutter Learning Project!
    - Creating complex animations using `AnimationController`
    - `Hero` animations for smooth page transition
    - `GestureDetector` with `ScaleTransition` for interactive animations
+
+9. **Networking and JSON Parsing**
+   - Send HTTP requests to fetch data
+   - Parse JSON responses
+   - Handle asynchronous requests and errors

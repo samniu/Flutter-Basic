@@ -39,3 +39,8 @@
    - `AnimationController` 创建复杂动画   
    - `Hero` 页面切换动画
    - `GestureDetector` 结合 `ScaleTransition` 交互动画
+
+9. **网络请求和JSON解析**
+   - 发送 HTTP 请求获取数据
+   - 解析 JSON 响应
+   - 处理异步请求与错误   
