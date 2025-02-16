@@ -37,3 +37,5 @@
 8. **动画**
    - `AnimatedContainer` 实现简单动画
    - `AnimationController` 创建复杂动画   
+   - `Hero` 页面切换动画
+   - `GestureDetector` 结合 `ScaleTransition` 交互动画

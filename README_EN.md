@@ -37,3 +37,5 @@
 8. **Animations**
    - Implementing simple animations with `AnimatedContainer`
    - Creating complex animations using `AnimationController`
+   - `Hero` animations for smooth page transition
+   - `GestureDetector` with ScaleTransition for interactive animations

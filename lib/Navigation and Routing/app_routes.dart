@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import '../Animation/animated_container_page.dart'; // AnimatedContainer 示例页面
 import '../Animation/animation_controller_page.dart'; // AnimationController 示例页面
 import '../Animation/tween_animation_page.dart'; 
+import '../Animation/hero_animation_page.dart';
+import '../Animation/tap_scale_animation_page.dart';
 
 class AppRoutes {
   // 返回路由配置
@@ -14,6 +16,8 @@ class AppRoutes {
       '/animatedContainer': (context) => AnimatedContainerPage(),
       '/animationController': (context) => AnimationControllerPage(),
       '/tweenAnimation': (context) => TweenAnimationPage(),
+      '/heroAnimation': (context) => HeroAnimationPage(),
+      '/tapScaleAnimation': (context) => TapScaleAnimationPage(),
     };
   }
 
