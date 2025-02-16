@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 // import '../SharedPreferences(local storage)/storage_page.dart';
 // import '../State Management with Provider/provider_page.dart'; 
 import '../database/database_page.dart';
+import '../theme/theme_demo_page.dart';
 
 class AppRoutes {
   // 返回路由配置
@@ -36,6 +37,9 @@ class AppRoutes {
 
       // database
       '/database': (context) => DatabasePage(),
+
+      // theme
+      '/themeDemo': (context) => ThemeDemoPage(),
     };
   }
 
@@ -46,6 +50,7 @@ class AppRoutes {
     // return '/network';
     // return '/storage';
     // return '/provider';
-    return '/database';
+    // return '/database';
+    return '/themeDemo';
   }
 }

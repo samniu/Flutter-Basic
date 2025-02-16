@@ -28,6 +28,20 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Basic',
+      theme: ThemeData(
+        primarySwatch: Colors.blue, // 主题色
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.blue),
+          bodyMedium: TextStyle(fontSize: 18, color: Colors.black87),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueAccent,
+            foregroundColor: Colors.white,
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          ),
+        ),
+      ),      
       initialRoute: AppRoutes.getInitialRoute(), // 使用 AppRoutes 中的 initialRoute
       routes: AppRoutes.getRoutes(), // 使用 AppRoutes 中的 routes 配置
       // home: HomePage(),
