@@ -54,3 +54,6 @@
    - 学习 Provider 进行全局状态管理
    - 了解 ChangeNotifier 和 Consumer 用法
    - 通过 Provider 共享数据
+
+12. **SQLite 本地数据库存储**
+   - `sqflite` 进行 SQLite 数据存储   

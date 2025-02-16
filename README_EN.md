@@ -54,3 +54,6 @@
    - Learning Provider provides global status management
    - Learn about the ChangeNotifier and Consumer usage
    - Shares data through the Provider
+
+12. **SQLite Local Database Storage**
+   - `sqflite` for SQLite integration   

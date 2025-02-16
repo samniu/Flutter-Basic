@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 // import '../Animation/tap_scale_animation_page.dart';
 // import '../network/network_page.dart';
 // import '../SharedPreferences(local storage)/storage_page.dart';
-import '../State Management with Provider/provider_page.dart'; 
+// import '../State Management with Provider/provider_page.dart'; 
+import '../database/database_page.dart';
 
 class AppRoutes {
   // 返回路由配置
@@ -31,7 +32,10 @@ class AppRoutes {
       // '/storage': (context) => StoragePage(),
 
       //State Management with Provider
-      '/provider': (context) => ProviderPage(),
+      // '/provider': (context) => ProviderPage(),
+
+      // database
+      '/database': (context) => DatabasePage(),
     };
   }
 
@@ -41,6 +45,7 @@ class AppRoutes {
     // return '/animatedContainer'; // 设定动画页面为初始页面
     // return '/network';
     // return '/storage';
-    return '/provider';
+    // return '/provider';
+    return '/database';
   }
 }
