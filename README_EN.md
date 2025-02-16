@@ -19,20 +19,21 @@
 4. **File Structuring**
    - Splitting functional code into separate files to improve maintainability
 
-5. **Git Commit Convention**
-   - Committing updates to GitHub
-
-6. **Flutter Navigation and Routing**
+5. **Flutter Navigation and Routing**
    - Basic Navigation
    - Passing Arguments
    - Named Routes
 
-7. **Form Handling**
+6. **Form Handling**
    - Creating a simple form and using `Form` and `TextFormField` for data input
    - Implementing form validation and submission
    - Using `GlobalKey` to manage form state
    - Submitting form data and displaying it on the screen
 
-8. **Asynchronous Operations**
+7. **Asynchronous Operations**
    - Using `FutureBuilder` and `StreamBuilder` for handling asynchronous data loading
    - Handling loading, error, and data display in asynchronous operations
+
+8. **Animations**
+   - Implementing simple animations with `AnimatedContainer`
+   - Creating complex animations using `AnimationController`

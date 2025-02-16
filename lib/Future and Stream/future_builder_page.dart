@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'async_operations.dart'; // 导入功能代码文件
 
 class FutureBuilderPage extends StatelessWidget {
+  const FutureBuilderPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
