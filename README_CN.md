@@ -57,3 +57,7 @@
 
 12. **SQLite 本地数据库存储**
    - `sqflite` 进行 SQLite 数据存储   
+
+13. **Firebase使用**
+   - 使用firebase 注册和登录
+   - 写入数据到firestore
