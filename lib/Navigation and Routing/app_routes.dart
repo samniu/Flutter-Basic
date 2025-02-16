@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 // import '../Animation/hero_animation_page.dart';
 // import '../Animation/tap_scale_animation_page.dart';
 import '../network/network_page.dart';
+import '../SharedPreferences(local storage)/storage_page.dart';
 
 class AppRoutes {
   // 返回路由配置
@@ -24,6 +25,9 @@ class AppRoutes {
 
       // Network
       '/network': (context) => NetworkPage(),
+
+      // Local storage with SharedPreferences
+      '/storage': (context) => StoragePage(),
     };
   }
 
@@ -31,6 +35,7 @@ class AppRoutes {
   static String getInitialRoute() {
     // return '/';
     // return '/animatedContainer'; // 设定动画页面为初始页面
-    return '/network';
+    // return '/network';
+    return '/storage';
   }
 }

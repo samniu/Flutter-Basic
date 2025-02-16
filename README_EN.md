@@ -44,4 +44,8 @@
    - Send HTTP requests to fetch data
    - Parse JSON responses
    - Handle asynchronous requests and errors
-      
+
+10. **Local Storage with SharedPreferences**
+   - Store and retrieve local data using SharedPreferences
+   - Manage user settings, login states, and persistent storage
+   - Implement a simple UI for local data management   
