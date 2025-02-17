@@ -62,6 +62,7 @@ Welcome to the Flutter Learning Project!
 12. **SQLite Local Database Storage**
    - `sqflite` for SQLite integration  
 
-13. **Firebase**
+13. **Firebase usage**
    - firebase auth login 
    - write data to firestore
+   - remove app key hard code 
