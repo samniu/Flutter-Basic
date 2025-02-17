@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
         );
     }
   }
-  
+
   // 通过 dotenv 加载敏感信息
   static FirebaseOptions get ios {
     return FirebaseOptions(
