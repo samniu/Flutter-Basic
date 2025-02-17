@@ -43,6 +43,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Ignore Firebase configuration files for all platforms
 .env
 google-services.json
 GoogleService-Info.plist
