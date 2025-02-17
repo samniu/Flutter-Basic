@@ -66,3 +66,4 @@ Welcome to the Flutter Learning Project!
    - firebase auth login 
    - write data to firestore
    - remove app key hard code 
+   - keep login user
