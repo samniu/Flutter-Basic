@@ -61,6 +61,7 @@ class AuthService {
 
     print("✅ 用户信息写入成功");
   }
+
   // 获取当前用户数据
   Future<Map<String, dynamic>?> getUserData() async {
     User? user = _auth.currentUser;
@@ -69,4 +70,19 @@ class AuthService {
     DocumentSnapshot userDoc = await _firestore.collection('users').doc(user.uid).get();
     return userDoc.exists ? userDoc.data() as Map<String, dynamic> : {'email': user.email};
   }
+
+  // 获取当前用户 Firestore 数据的 Stream
+  Stream<DocumentSnapshot<Map<String, dynamic>>> getUserStream() {
+    User? user = _auth.currentUser;
+    if (user == null) {
+      return const Stream.empty(); // 用户未登录，返回空流
+    }
+    return _firestore.collection('users').doc(user.uid).snapshots();
+  }
+
+  // 用户退出
+  Future<void> logoutUser() async {
+  await _auth.signOut();
+  print("✅ 用户已退出");
+}
 }

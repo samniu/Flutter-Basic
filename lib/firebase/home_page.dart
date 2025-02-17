@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'auth_service.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -23,15 +25,41 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  Future<void> _logout() async {
+    await _authService.logoutUser();
+    Navigator.pushReplacementNamed(context, '/login'); // 退出后回到登录页
+  }  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("主页")),
+      appBar: AppBar(
+        title: Text("主页"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: _logout, // 退出按钮
+          ),
+        ],        
+        ),
+      
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("当前用户：$userEmail"),
+            StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+              stream: _authService.getUserStream(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return Text("加载中...");
+                }
+                if (!snapshot.hasData || snapshot.data == null || !snapshot.data!.exists) {
+                  return Text("用户数据不存在");
+                }
+                var userData = snapshot.data!.data();
+                return Text("当前用户：${userData?['email'] ?? '未知'}");
+              },
+            ),           
             
             SizedBox(height: 20),
             ElevatedButton(
@@ -43,17 +71,8 @@ class _HomePageState extends State<HomePage> {
                         
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/register');
-              },
-              child: Text("注册"),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/login');
-              },
-              child: Text("登录"),
+              onPressed: _logout,
+              child: Text("退出登录"),
             ),
           ],
         ),

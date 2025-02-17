@@ -14,9 +14,14 @@ import 'package:flutter/material.dart';
 import '../firebase/register_page.dart';
 import '../firebase/login_page.dart';
 import '../firebase/home_page.dart';
+import '../firebase/auth_checker.dart';
 
 
 class AppRoutes {
+  // 动态获取初始页面
+  static String getInitialRoute() {
+    return AuthChecker.getInitialRoute();
+  }  
   // 返回路由配置
   static Map<String, WidgetBuilder> getRoutes() {
     return {
@@ -46,21 +51,21 @@ class AppRoutes {
       // '/themeDemo': (context) => ThemeDemoPage(),
 
       //firebase
+      '/userhome': (context) => HomePage(),
       '/register': (context) => RegisterPage(),
       '/login': (context) => LoginPage(),
-      '/userhome': (context) => HomePage(),
     };
   }
 
   // 返回 initialRoute 配置
-  static String getInitialRoute() {
-    // return '/';
-    // return '/animatedContainer'; // 设定动画页面为初始页面
-    // return '/network';
-    // return '/storage';
-    // return '/provider';
-    // return '/database';
-    // return '/themeDemo';
-    return '/register';
-  }
+  // static String getInitialRoute() {
+  //   // return '/';
+  //   // return '/animatedContainer'; // 设定动画页面为初始页面
+  //   // return '/network';
+  //   // return '/storage';
+  //   // return '/provider';
+  //   // return '/database';
+  //   // return '/themeDemo';
+  //   return '/register';
+  // }
 }

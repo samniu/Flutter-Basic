@@ -61,3 +61,5 @@
 13. **Firebase**
    - firebase auth login 
    - write data to firestore
+   - remove app key hard code 
+   - keep login user

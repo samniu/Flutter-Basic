@@ -61,3 +61,4 @@
 13. **Firebase使用**
    - 使用firebase 注册和登录
    - 写入数据到firestore
+   - 已登录用户直接进入主页
