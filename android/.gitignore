@@ -12,6 +12,7 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
+# Ignore Firebase configuration files for all platforms
 .env
 google-services.json
 GoogleService-Info.plis
