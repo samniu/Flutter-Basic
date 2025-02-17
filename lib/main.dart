@@ -11,10 +11,13 @@ import 'Navigation and Routing/app_routes.dart';
 import 'State Management with Provider/counter_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 
 
 
 void main() async {
+  await dotenv.load();  // 加载 .env 文件
   WidgetsFlutterBinding.ensureInitialized(); // 确保 Flutter 绑定初始化
 
   // 初始化 Firebase
