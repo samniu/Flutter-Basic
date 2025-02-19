@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'auth_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../Provider/auth_provider.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -32,6 +35,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("主页"),
@@ -47,20 +52,21 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
-              stream: _authService.getUserStream(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Text("加载中...");
-                }
-                if (!snapshot.hasData || snapshot.data == null || !snapshot.data!.exists) {
-                  return Text("用户数据不存在");
-                }
-                var userData = snapshot.data!.data();
-                return Text("当前用户：${userData?['email'] ?? '未知'}");
-              },
-            ),           
-            
+            // StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+            //   stream: _authService.getUserStream(),
+            //   builder: (context, snapshot) {
+            //     if (snapshot.connectionState == ConnectionState.waiting) {
+            //       return Text("加载中...");
+            //     }
+            //     if (!snapshot.hasData || snapshot.data == null || !snapshot.data!.exists) {
+            //       return Text("用户数据不存在");
+            //     }
+            //     var userData = snapshot.data!.data();
+            //     return Text("当前用户：${userData?['email'] ?? '未知'}");
+            //   },
+            // ),           
+            Text("当前用户：${authProvider.user?.email ?? '未登录'}"),
+
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
@@ -68,12 +74,21 @@ class _HomePageState extends State<HomePage> {
               },
               child: Text("写入用户信息"),
             ),
-                        
+            
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _logout,
+              onPressed: () async {
+                await authProvider.logout();
+                Navigator.pushReplacementNamed(context, '/login');
+              },
               child: Text("退出登录"),
-            ),
+            ),            
+                        
+            // SizedBox(height: 20),
+            // ElevatedButton(
+            //   onPressed: _logout,
+            //   child: Text("退出登录"),
+            // ),
           ],
         ),
       ),

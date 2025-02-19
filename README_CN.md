@@ -62,3 +62,8 @@
    - 使用firebase 注册和登录
    - 写入数据到firestore
    - 已登录用户直接进入主页
+
+14. **Provider**
+   -  Provider 是 Flutter 推荐的状态管理方式之一
+   - AuthProvider 统一管理用户登录状态，并监听 Firebase 状态变化
+   - 在 HomePage 和 LoginPage 使用 `Provider.of<AuthProvider>` 访问和修改用户状态   

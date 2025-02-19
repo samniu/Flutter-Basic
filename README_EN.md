@@ -63,3 +63,7 @@
    - write data to firestore
    - remove app key hard code 
    - keep login user
+
+14. **Provider** 
+   - Use Provider manage user login status and monitor firebase status
+   - Use `Provider.of<AuthProvider> ` access and modify user status in Home and Login page   
